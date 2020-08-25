@@ -3,15 +3,15 @@
 """
 this is a script that will inpsect text from a formatted spanish list.
 
-it will see all the pairs making a dictionary. it will then randomize that dictionary and offer each word to the user until each word has been seen once.
+attempting to convert to classes per joe's recommendations.
 
-the word presented will be in spanish allowing the user to check if they can remember by typing in the english word.
+TODO (from Joe):
+ - convert to classes so it will organize into pretty chunks
+ - presentToUser doesn’t use parameter “i”
+ - Line under 63 converts int to int lol
+ - all the int conversions... but I think you might able to have just 1 final int conversion, So wrap the whole thing I’m just one int
+ - presentToUser uses “item” but it’s not passed in as a parameter. It works cuz it’s a global variable, but that’s usually not a great habit cuz it makes code confusing 
 
-the program will then check it against the dictionary value and return correct if it is the same or incorrect if it is not.
-
-the corrects and incorrects will be saved to a list that will show a percentage of right to wrong.
-
-- allow user to select spanish to english or english to spanish
 
 """
 
@@ -25,8 +25,24 @@ notCorrectList = []
 v1 = 0
 v2 = 1
 
-def listChooser(i):
-	if i == True:
+class card:
+	def __init__(self,side1,side2):
+		self.side1 = side1
+		self.side2 = side2
+
+class game:
+	def __init__(self):
+		pass
+
+	def flashCardList():
+		mainlist
+		correctList
+		incorrectList
+
+
+	def checker(i):
+		# checks right or wrong answer
+		if i == True:
 		correctList.append(i)
 	else:
 		notCorrectList.append(i)
