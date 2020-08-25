@@ -11,8 +11,6 @@ the program will then check it against the dictionary value and return correct i
 
 the corrects and incorrects will be saved to a list that will show a percentage of right to wrong.
 
-- allow user to select spanish to english or english to spanish
-
 """
 
 import re
@@ -22,8 +20,8 @@ fileLoc = '' # absolute file path to word list
 
 correctList = []
 notCorrectList = []
-v1 = 0
-v2 = 1
+wordPos = 0
+definitionPos = 1
 
 def listChooser(i):
 	if i == True:
@@ -32,8 +30,8 @@ def listChooser(i):
 		notCorrectList.append(i)
 
 def presentToUser(i):
-	question = item[v1]
-	answer = item[v2]
+	question = i[wordPos]
+	answer = i[definitionPos]
 	print(question)
 	userAnswer = input()
 	score = userAnswer == answer
@@ -53,7 +51,7 @@ flashSwitch = input("s or e: ")
 if flashSwitch == "s":
 	pass
 else:
-	v1,v2 = 1,0
+	wordPos,definitionPos = 1,0
 
 while len(mo) > 0:
 	item = random.sample(mo,1)[0]
