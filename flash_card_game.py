@@ -11,6 +11,8 @@ the program will then check it against the dictionary value and return correct i
 
 the corrects and incorrects will be saved to a list that will show a percentage of right to wrong.
 
+
+
 """
 
 import re
